@@ -16,6 +16,7 @@ export default function Testimonials() {
   useEffect(() => {
     fetch("/api/reviews").then(async res => {
       const response = await res.json();
+	  console.log(response?.result?.reviews)
       setReviews(response.result?.reviews || []);
     }).catch(e => {
       setError(e.message);
