@@ -13,6 +13,7 @@ export default function Footer(){
         zIndex:60,
         background:"white"
     }}>
+        
         <div className="p-8 flex flex-col">
             <Link href={"/"} className="flex items-center w-max pb-4 gap-2">
                 <Image priority className="cursor-pointer w-20 h-20" alt="Skinny ink tatoos" src="/logo.webp" width={80} height={80}/>
