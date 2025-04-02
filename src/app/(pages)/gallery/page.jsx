@@ -49,7 +49,7 @@ export default function Gallery() {
               <Tilt key={index} tiltMaxAngleX={3} tiltMaxAngleY={3} className="p-4">
                 <div className="bg-gray-100 rounded-lg shadow-md">
                   <Image
-                    src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}`}
+                    src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}`}
                     alt={`Gallery Image ${index + 1}`}
                     width={400}
                     height={300}
