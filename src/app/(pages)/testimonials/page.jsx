@@ -14,8 +14,8 @@ export default function Testimonials() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-	  fetch("/api/reviews").then(res=>{
-		  const response = res.json()
+	  fetch("/api/reviews").then(async res=>{
+		  const response = await res.json()
 		  setReviews(response.result?.reviews || []);
 	  }).catch(e=>{
 		  setError(error.message);
