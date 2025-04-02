@@ -6,31 +6,22 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Tilt from 'react-parallax-tilt';
 const cairo = Cairo_Play({ subsets: ["latin"] });
-import PreFooter from "@/components/preFooter"
-export default function Blogs() {
+import PreFooter from "@/components/preFooter";
+
+export default function Testimonials() {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await (await fetch("/api/reviews")).json();
-
-        if (response.error) {
-          throw new Error(response.error);
-        }
-		console.log(response.result.reviews)
-        setReviews(response.result?.reviews || []);
-      } catch (error) {
-        console.error("Error fetching reviews:", error);
-        setError(error.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchReviews();
+	  fetch("/api/reviews").then(res=>{
+		  const response = res.json()
+		  setReviews(response.result?.reviews || []);
+	  }).catch(e=>{
+		  setError(error.message);
+	  }).finally(()=>{
+		setLoading(false);
+	  })
   }, []);
 
   return (<>
