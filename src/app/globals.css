@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html{
+  @apply bg-stone-900;
+}
+body{
+  color: white;
+  @apply flex flex-col;
+}
+@keyframes main {
+  from{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes pop {
+  from{
+      scale: 1;
+      transform: rotate(0deg);
+  }
+  30%{
+      scale: 1.1;
+      transform: rotate(-10deg);
+  }
+  50%{
+      scale:1;
+      transform: rotate(0deg);
+  }
+  70%{
+      transform: rotate(10deg);
+      scale: 1.1;
+  }
+  to{
+      transform: rotate(0deg);
+      scale: 1;
+  }
+}
+@keyframes just-pop {
+  from{
+      scale: 1;
+  }
+  30%{
+      scale: 1.05;
+  }
+  50%{
+      scale:1;
+  }
+  70%{
+      scale: 1.05;
+  }
+  to{
+      scale: 1;
+  }
+}
+.hover-pop:hover{
+  animation: pop 0.4s forwards;
+}
+.hover-just-pop:hover{
+  animation: just-pop 0.4s forwards;
+}
+
+main{
+  animation: main 0.5s forwards;
+  @apply relative text-black overflow-hidden w-full z-10;
+  min-height: calc(100vh - var(--header-height));
+}
+@keyframes masterBox {
+  from{
+    color:black;
+  }
+  to{
+    color:white;
+  }
+}
+.master-box{
+  @apply w-full lg:p-1 relative z-10 text-black bg-white; 
+  backdrop-filter:grayscale(60%) blur(1px);
+}
+
+p{
+  @apply w-full text-justify;
+}
+.header-locked-mobile{
+  --h:calc(100vh - var(--header-height));
+  @apply lg:h-[var(--h)];
+}
+
+.pop-effect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 1rem;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(45deg, #ff6b6b, #ffcc5c);
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  animation: popRotate 1s ease-in-out forwards;
+  cursor: pointer;
+}
+
+.pop-effect:hover{
+  animation: popRotate 1s ease-in-out infinite !important;
+
+}
+
+@keyframes popRotate {
+  0% {
+    transform: scale(1) rotateY(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5) rotateY(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotateY(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes sparkle {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+  100% { opacity: 0; transform: scale(2); }
+}

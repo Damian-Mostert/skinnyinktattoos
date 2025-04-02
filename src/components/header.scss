@@ -1,0 +1,82 @@
+.header{
+    @apply top-0 left-0 flex items-center justify-start lg:gap-4 z-50 fixed;
+    &-logo{
+        @apply flex items-center w-screen justify-center lg:justify-start lg:w-[700px];
+        img{
+            @apply w-20 h-20 lg:w-28 lg:h-28;
+        }
+        h1{
+            @apply font-extrabold text-nowrap text-xl lg:text-2xl text-black;
+        }
+    }
+    &-links{
+        @apply flex justify-center p-1 lg:justify-start w-full gap-4 capitalize;
+        a{
+            position: relative;
+            transition: all 0.5s;
+            &:hover{
+                &::after{
+                    @keyframes link {
+                        from{
+                            width: 0%;
+                        }
+                        to{
+                            width: 100%;
+                        }
+                    }
+                    animation: link 1s forwards;
+                    content: "";
+                    top: calc(100% + 2px);
+                    height: 1px;
+                    position: absolute;
+                    left: 0px;
+                    background-color: currentColor;
+                }
+            }
+            color:var(--link-color,black);
+            &.active{
+                color:rgb(203, 79, 79);
+                &::after{
+                    content: "";
+                    top: calc(100% + 2px);
+                    height: 1px;
+                    position: absolute;
+                    left: 0px;
+                    width: 100%;
+                    background-color: currentColor;
+                }
+            }
+        }
+    }
+}
+.link-no-line{
+    &::after{
+        display: none !important;
+    }
+}
+
+.spacer{
+    height: 48px;
+    width: 1px;
+    background-color:rgb(149, 149, 149);
+}
+.spacer-footer{
+    height: 1px;
+    background-color:rgb(114, 221, 75);
+}
+
+
+.logo-pop{
+    animation: pop 0.4s forwards;
+    z-index: 10 !important;
+    animation-delay: var(--pop-delay, 6s);
+}
+
+.media-pop{
+    animation: pop 0.4s forwards;
+    animation-delay: var(--pop-delay,6.4s);
+}
+.media-pop2{
+    animation: pop 0.4s forwards;
+    animation-delay: var(--pop-delay,6.8s);
+}

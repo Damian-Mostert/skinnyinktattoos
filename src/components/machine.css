@@ -1,0 +1,38 @@
+@keyframes movesUpAndDown {
+    from {
+        transform: translateX(var(--from));
+    }
+    50% {
+        transform: translateX(var(--to));
+    }
+    to {
+        transform: translateX(var(--from));
+    }
+}
+
+@keyframes movesUpAndDown2 {
+    from {
+        transform: translateX(var(--from)) scaleX(-1);
+    }
+    50% {
+        transform: translateX(var(--to)) scaleX(-1);
+    }
+    to {
+        transform: translateX(var(--from)) scaleX(-1);
+    }
+}
+
+.machine {
+    --from: 0vw;
+    --to: 90vw;
+    position: absolute;
+    bottom: calc(100% - 10px);
+    animation: movesUpAndDown 13s ease-in-out infinite;
+    z-index: 70;
+}
+
+.machine[direction="reverse"] {
+    --from: 0vw;
+    --to: 90vw;
+    animation: movesUpAndDown2 13s ease-in-out infinite;
+}

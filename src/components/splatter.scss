@@ -1,0 +1,46 @@
+#canvas {
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+    img {
+      width: 500px;
+    }
+  }
+  
+  .splotch {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    margin-top: 400px;
+  }
+  
+  #red {
+    top: 200px;
+    left: 25%;
+  }
+  
+  #blue {
+    top: 500px;
+    left: 75%;
+  }
+  
+  #yellow {
+    top: 800px;
+    transform: translate(-50%, -50%) scaleX(-1);
+    left: 25%;
+  }
+  
+  #pink {
+    top: 1100px;
+    left: 75%;
+  }
+  
+  #black {
+    top: 1400px;
+    left: 25%;
+  }
+  
+  
+  
