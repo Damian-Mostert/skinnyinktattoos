@@ -55,10 +55,7 @@ export default function Gallery() {
                     height={300}
                     className="rounded-lg object-cover"
                   />
-                  <div className="p-4">
-                    <Link href={photo.html_attributions[0]} className="text-blue-500 hover:underline" target="_blank">
-                      View Source
-                    </Link>
+                  <div className="p-4" dangerouslySetInnerHTML={photo.html_attributions[0]}>
                   </div>
                 </div>
               </Tilt>
