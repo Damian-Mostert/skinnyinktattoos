@@ -55,8 +55,6 @@ export default function Gallery() {
                     height={300}
                     className="rounded-lg object-cover"
                   />
-                  <div className="p-4" dangerouslySetInnerHTML={photo.html_attributions[0]}>
-                  </div>
                 </div>
               </Tilt>
             ))}
