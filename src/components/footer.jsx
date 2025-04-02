@@ -15,7 +15,7 @@ export default function Footer(){
     }}>
         <div className="p-8 flex flex-col">
             <Link href={"/"} className="flex items-center w-max pb-4 gap-2">
-                <Image className="cursor-pointer w-20 h-20" alt="Skinny ink tatoos" src="/logo.webp" width={80} height={80}/>
+                <Image priority className="cursor-pointer w-20 h-20" alt="Skinny ink tatoos" src="/logo.webp" width={80} height={80}/>
                 <h1 className={`${cario.className} font-extrabold text-nowrap text-2xl`}>Skinny ink tattoos</h1>
             </Link>
             <div className="header-links !bg-transparent w-full flex flex-col !gap-4 text-center">

@@ -48,19 +48,22 @@ export default function VideoPlayer() {
           key={pathname}
           preload="auto"
           ref={vref}
-          style={{ transform: `scale(1.2) rotate(${Math.round(translateY / 30)}deg) translateY(${Math.round(translateY - 50)}px)`, transition: "transform 0.1s linear" }}
+          style={{  filter:"blur(4px)",transform: `scale(1.2) rotate(${Math.round(translateY / 30)}deg) translateY(${Math.round(translateY - 50)}px)`, transition: "transform 0.1s linear" }}
         />
         <div className="video-mask" />
       </div>
       {show && (
         <>
           <video
-            src="/videos/splash.mp4"
+            src="/videos/blot.mp4"
             className="video-fg-animate-in"
             playsInline
             muted
             preload="auto"
             autoPlay
+            style={{
+              filter:"blur(4px)"
+            }}
           />
           <div className="logo-container">
             <Image

@@ -32,7 +32,7 @@ export default function Header(){
     <div ref={headerRef} className={`w-full h-max flex lg:p-2 header master-box ${cario.className}`}>
         <nav className="flex items-center flex-col lg:flex-row lg:rounded-lg w-full">
             <Link href={"/"} className="header-logo p-1 lg:p-0">
-                <Image key={pathname} className="relative logo-pop" style={{
+                <Image priority key={pathname} className="relative logo-pop" style={{
                     ...doInstantAnimation?{
                         "--pop-delay":"0s"
                     }:{}
