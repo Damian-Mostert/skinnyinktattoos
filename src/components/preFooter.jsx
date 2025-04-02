@@ -1,11 +1,8 @@
 import Image from "next/image";
-
+import "./preFooter.scss"
 export default function PreFooter(){
     return <div className="relative h-80 w-full">
-    <Image alt="Skinny ink tattoos" fill className="object-cover" style={{
-      objectPosition:"0px -260px",
-      opacity:0.7
-    }} src={"/home-footer.webp"}/>
+    <Image alt="Skinny ink tattoos" fill className="pre-footer" src={"/home-footer.webp"}/>
     <div style={{
       color:"black",
       fontSize:"7rem"

@@ -1,0 +1,8 @@
+.pre-footer{
+    @apply object-cover;
+    object-position: 0px -260px;
+    @media screen and (max-width:720px) {
+        object-position: center;
+    }
+    opacity:0.7
+}
