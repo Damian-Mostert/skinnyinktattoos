@@ -44,10 +44,10 @@ export default function Gallery() {
         ) : photos.length === 0 ? (
           <p className="text-gray-400">No photos available.</p>
         ) : (
-          <div className="font-sans grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="font-sans w-full flex flex-wrap justify-center">
             {photos.map((photo, index) => (
               <Tilt key={index} tiltMaxAngleX={3} tiltMaxAngleY={3} className="p-4">
-                <div className="bg-gray-100 rounded-lg shadow-md m-auto">
+                <div className="w-full lg:1/3 h-full rounded-lg shadow-md flex justify-center items-center">
                   <img
                     src={photo}
                     alt={`Gallery Image ${index + 1}`}
