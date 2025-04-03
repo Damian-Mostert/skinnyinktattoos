@@ -30,7 +30,7 @@ export default function Gallery() {
 
   return (
     <>
-      <section className="p-6 text-black rounded-lg shadow-lg relative">
+      <section className="p-2 lg:p-6 text-black rounded-lg shadow-lg relative">
         <div className="absolute top-0 left-0 w-full h-full" style={{
           backgroundImage: "linear-gradient(transparent,transparent,rgba(0, 0, 0, 0.7))"
         }} />
