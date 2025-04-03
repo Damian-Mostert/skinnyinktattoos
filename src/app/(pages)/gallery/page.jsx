@@ -18,7 +18,7 @@ export default function Gallery() {
     fetch("/api/images")
       .then(async (res) => {
         const response = await res.json();
-        setPhotos(response.result?.images || []);
+        setPhotos(response.images || []);
       })
       .catch((e) => {
         setError(e.message);
