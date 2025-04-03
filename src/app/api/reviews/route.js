@@ -13,9 +13,8 @@ export async function GET() {
 
   try {
     const response = await axios.get(
-      `https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeId}&fields=reviews,photos&reviews.sort=newest&key=${apiKey}`
-    );
-    
+        `https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeId}&fields=reviews&reviews.sort=newest&key=${apiKey}`
+      );
       
 
     return NextResponse.json(response.data, {
