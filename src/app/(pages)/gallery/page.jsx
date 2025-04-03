@@ -47,7 +47,7 @@ export default function Gallery() {
           <div className="font-sans grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {photos.map((photo, index) => (
               <Tilt key={index} tiltMaxAngleX={3} tiltMaxAngleY={3} className="p-4">
-                <div className="bg-gray-100 rounded-lg shadow-md">
+                <div className="bg-gray-100 rounded-lg shadow-md m-auto">
                   <img
                     src={photo}
                     alt={`Gallery Image ${index + 1}`}
