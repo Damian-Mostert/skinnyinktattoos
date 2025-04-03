@@ -47,7 +47,7 @@ export default function Gallery() {
           <div className="font-sans w-full flex flex-wrap justify-center">
             {photos.map((photo, index) => (
               <Tilt key={index} tiltMaxAngleX={3} tiltMaxAngleY={3} className="p-4">
-                <div className="w-full lg:1/3 h-full rounded-lg shadow-md flex justify-center items-center">
+                <div className="w-full lg:1/3 h-full flex justify-center items-center">
                   <img
                     src={photo}
                     alt={`Gallery Image ${index + 1}`}
